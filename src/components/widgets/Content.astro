@@ -46,14 +46,14 @@ const columnsClass =
     tagline={tagline}
     classes={{
       container: 'max-w-xl sm:mx-auto lg:max-w-2xl',
-      title: 'text-4xl md:text-5xl font-bold tracking-tighter mb-4 font-heading',
-      subtitle: 'max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400',
+      title: 'text-2xl md:text-3xl font-bold tracking-tighter mb-4 font-heading',
+      subtitle: 'max-w-3xl mx-auto sm:text-center text-base text-muted dark:text-slate-400',
     }}
   />
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
       <div class="md:basis-1/2 self-center">
-        {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
+        {content && <div class="mb-12 text-base dark:text-slate-400" set:html={content} />}
 
         {
           callToAction && (
@@ -77,7 +77,7 @@ const columnsClass =
                     </div>
                     <div class="mt-0.5">
                       {itemTitle && (
-                        <h3 class="text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">
+                        <h3 class="text-base font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2">
                           {itemTitle}
                         </h3>
                       )}
@@ -91,7 +91,7 @@ const columnsClass =
                         <div
                           class:list={[
                             { 'mt-3': itemTitle || description },
-                            'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
+                            'text-base font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
                           ]}
                         >
                           <Button variant="link" {...callToAction} />
