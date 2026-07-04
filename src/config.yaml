@@ -1,6 +1,6 @@
 site:
   name: Henrik
-  site: 'https://henrik.example.com'
+  site: 'https://henrik.ink'
   base: '/'
   trailingSlash: false
 
