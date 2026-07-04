@@ -1,6 +1,6 @@
 # henrik.ink
 
-Personal website of Henrik — intro, CV, and selected work.
+Personal website of Henrik — home, CV, and selected work.
 
 **Live site:** [https://henrik.ink](https://henrik.ink)
 
@@ -15,7 +15,7 @@ Personal website of Henrik — intro, CV, and selected work.
 
 | Route | File                    | Description                       |
 | ----- | ----------------------- | --------------------------------- |
-| `/`   | `src/pages/index.astro` | Intro and short bio               |
+| `/`   | `src/pages/index.astro` | Home and short bio                |
 | `/cv` | `src/pages/cv.astro`    | Experience, education, and skills |
 
 ## Development

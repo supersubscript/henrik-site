@@ -11,7 +11,7 @@ metadata:
   title:
     default: Henrik
     template: '%s — Henrik'
-  description: 'Personal website of Henrik — intro, CV, and selected work.'
+  description: 'Personal website of Henrik — home, CV, and selected work.'
   robots:
     index: true
     follow: true

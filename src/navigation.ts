@@ -2,7 +2,7 @@ import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    { text: 'Intro', href: getPermalink('/') },
+    { text: 'Home', href: getPermalink('/') },
     { text: 'CV', href: getPermalink('/cv') },
   ],
   actions: [],
