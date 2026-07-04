@@ -1,0 +1,23 @@
+---
+description: Astro and TypeScript conventions for site implementation
+globs: **/*.{astro,ts,tsx,js,jsx}
+alwaysApply: false
+---
+
+# Astro And TypeScript
+
+- Page routes live in `src/pages/`; reusable page sections live in `src/components/widgets/`; primitives live in `src/components/ui/`.
+- Match existing `.astro` frontmatter style: imports first, props/constants next, then markup after the closing frontmatter fence.
+- Prefer slots and typed props over ad hoc `set:html`. Use `set:html` only when existing component APIs or trusted HTML content require it.
+- Keep components static by default. Add client-side scripts only for behavior that cannot be expressed with HTML/CSS/Astro.
+- Reuse existing widgets, UI primitives, layouts, and utility functions before creating new ones.
+- Use `~/` imports for `src` modules.
+- Keep Tailwind classes readable and consistent with existing components. Reuse `classes` props and `tailwind-merge` patterns where the component already supports them.
+- Preserve accessibility and responsive behavior when changing markup.
+
+# Images And Assets
+
+- Use `src/assets/` for imported assets that Astro should process.
+- Use `public/` only for files that should be served directly.
+- Prefer `src/components/common/Image.astro` for content images, especially remote CDN images routed through `unpic`.
+- Include meaningful `alt` text unless an image is decorative.

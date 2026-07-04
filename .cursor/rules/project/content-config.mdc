@@ -1,0 +1,21 @@
+---
+description: Content, routing, metadata, and site config conventions
+globs: **/*.{md,mdx,yaml,yml}
+alwaysApply: false
+---
+
+# Content And Config
+
+- Site-wide metadata, blog routes, analytics, language, and theme defaults live in `src/config.yaml`.
+- Blog content lives in `src/data/post/` and is validated by `src/content.config.ts`.
+- Keep frontmatter fields aligned with the content schema. Do not invent synonyms for existing fields.
+- Preserve permalink, category, tag, RSS, sitemap, and robots behavior when changing blog routing.
+- Treat SEO text as user-facing product copy: concise, specific, and consistent with the page content.
+- Avoid changing generated files in `.astro/`, `dist/`, or dependency folders.
+
+# Markdown And MDX
+
+- Prefer plain Markdown for simple posts and MDX only when components are needed.
+- Keep headings hierarchical and link text descriptive.
+- Use local/imported assets when the image belongs to the site; use remote URLs only when intentional.
+- Include useful image alt text.

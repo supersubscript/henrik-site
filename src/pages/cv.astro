@@ -1,0 +1,141 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import HeroText from '~/components/widgets/HeroText.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'CV',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="" title="Curriculum Vitae" subtitle="Experience, education, and skills." />
+
+  <Steps
+    title="Experience"
+    items={[
+      {
+        title:
+          'Senior Applied Research Scientist <br /> <span class="font-normal">InstaDeep, London</span> <br /> <span class="text-sm font-normal">Sep 2024 - Present</span>',
+        description:
+          'Leading applied research at the interface of multimodal (ML/DL) modelling, computational biology, and pharmaceutical R&D.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Computational Biologist <br /> <span class="font-normal">InstaDeep, London</span> <br /> <span class="text-sm font-normal">Jun 2023 - Oct 2024</span>',
+        description: `Delivered R&D projects involving medical imaging, multi-omics integration, and large language models for drug-development applications. Combined ML engineering with biological domain expertise.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Postdoctoral Research Associate <br /> <span class="font-normal">University of Cambridge - Sainsbury Laboratory (SLCU)</span> <br /> <span class="text-sm font-normal">Dec 2021 - Jun 2023</span>',
+        description:
+          'Continued quantitative and machine-learning-driven research on high-throughput biological data at SLCU.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'PhD Candidate <br /> <span class="font-normal">University of Cambridge - Sainsbury Laboratory (SLCU)</span> <br /> <span class="text-sm font-normal">Oct 2017 - Dec 2021</span>',
+        description: `Focused on quantitative, computational, and machine-learning-driven approaches to high-throughput biological data. Developed analytical tools for 3D confocal image segmentation and feature extraction; built predictive models for large datasets; and implemented finite-element simulations of deformable viscoelastic tissues. Lectured on course elements in systems biology.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Graduate Student Researcher <br /> <span class="font-normal">University of Cambridge - Sainsbury Laboratory (SLCU) (SLCU)</span> <br /> <span class="text-sm font-normal">Jun 2017 - Aug 2017</span>',
+        description: `Integrated 3D microscopy datasets with computer-vision pipelines and mathematical models of complex gene regulatory networks. Developed quantitative methods for extracting single-cell dynamics from in vivo confocal timelapses and built the extractoR data-analysis toolkit.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Research Assistant <br /> <span class="font-normal">University of Cambridge - Sainsbury Laboratory (SLCU)</span> <br /> <span class="text-sm font-normal">Aug 2016 - Sep 2016</span>',
+        description: `Worked under Professor Henrik Jönsson on computational models of stochastic spatial patterning of CLAVATA3 in the Arabidopsis thaliana shoot apical meristem. Implemented spatially balanced numerical solvers for diffusive systems and analysed noise propagation within the CLV3-WUS feedback loop.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Supplemental Instructor <br /> <span class="font-normal">Lund University</span> <br /> <span class="text-sm font-normal">Aug 2015 - Jul 2016</span>',
+        description: `Delivered instruction to groups of up to 30 students in Analytical Mechanics, Quantum Physics, and Particle Physics across Swedish and international programmes.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Research Assistant <br /> <span class="font-normal">Lund University</span> <br /> <span class="text-sm font-normal">Jun 2015 - Aug 2015</span>',
+        description: `Conducted research under Dr Carl Troein on crossover strategies for sequence alignment in genetic algorithms with variable-length genomes, applied to parameter optimisation of a gene regulatory network model of the Arabidopsis thaliana circadian clock.`,
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <Steps
+    title="Education"
+    items={[
+      {
+        title: `Ph.D., Applied Mathematics and Theoretical Physics <br /> <span class="font-normal">University of Cambridge</span> <br /> <span class="text-sm font-normal">2017 - 2021</span>`,
+        description: 'Thesis: Integrative high-throughput analyses of aerial morphodynamics in plants',
+        icon: 'tabler:school',
+      },
+      {
+        title: `M.Phil., Computational Biology <br /> <span class="font-normal">University of Cambridge</span> <br /> <span class="text-sm font-normal">2016 - 2017</span>`,
+        description:
+          'Grade: 1.1, with distinction. Thesis: In vivo single cell dynamics of the shoot stem cell niche in Arabidopsis thaliana',
+        icon: 'tabler:school',
+      },
+      {
+        title: `B.Sc., Theoretical Physics <br /> <span class="font-normal">Lund University</span> <br /> <span class="text-sm font-normal">2013 - 2016</span>`,
+        description:
+          'Grade: 1.1, with distinction. Thesis: Linking the dynamics of genetic algorithms to the encoding of information',
+        icon: 'tabler:school',
+      },
+      {
+        title: `Theoretical Philosophy <br /> <span class="font-normal">Lund University</span> <br /> <span class="text-sm font-normal">2012 - 2013</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `Engineering Physics / Computer Science <br /> <span class="font-normal">Faculty of Engineering, Lund University</span> <br /> <span class="text-sm font-normal">2012 - 2013</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `Economics <br /> <span class="font-normal">Lund University</span> <br /> <span class="text-sm font-normal">2011 - 2012</span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <Features3
+    title="Skills"
+    subtitle="Areas of expertise developed across research and industry roles."
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: 'Machine learning & deep learning',
+        description: 'Transformer-based models, predictive modelling, and multimodal ML for biological and pharmaceutical applications.',
+      },
+      {
+        title: 'Computational biology',
+        description: 'Multi-omics integration, gene regulatory network modelling, and quantitative analysis of high-throughput biological data.',
+      },
+      {
+        title: 'Medical & biological imaging',
+        description: '3D confocal segmentation, feature extraction, and computer-vision pipelines for in vivo timelapse microscopy.',
+      },
+      {
+        title: 'Mathematical modelling',
+        description: 'Finite-element simulation of viscoelastic tissues, stochastic numerical methods, and differential equation-based systems.',
+      },
+      {
+        title: 'Python & C++',
+        description: 'Development of analysis toolkits, HPC workflows, and production ML pipelines.',
+      },
+      {
+        title: 'High-performance computing',
+        description: 'Cluster administration, scalable data processing, and optimisation for large-scale scientific workloads.',
+      },
+    ]}
+  />
+</Layout>

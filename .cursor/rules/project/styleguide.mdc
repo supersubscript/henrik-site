@@ -1,0 +1,45 @@
+---
+description: Universal rules for AI assistants working on henrik-site
+alwaysApply: true
+---
+
+# What This Project Is
+
+`henrik-site` is an Astro 6 + Tailwind CSS v4 static site based on AstroWind. It uses TypeScript, Astro components, content collections, MD/MDX blog content, and an AstroWind vendor integration loaded from `vendor/`.
+
+# How To Work On It
+
+- **Runtime**: Node.js >= 22.12.0.
+- **Package manager**: npm. Keep `package-lock.json` committed; never hand-edit it. Use npm commands for dependency changes.
+- **Commands**: `npm run dev`, `npm run build`, `npm run preview`, `npm run check`, `npm run fix`.
+- **Dev server**: if starting one, follow `AGENTS.md` and use Astro background mode (`astro dev --background`), then manage it with `astro dev status`, `astro dev logs`, and `astro dev stop`.
+- **Verify changes**: prefer `npm run check` for substantive edits. For narrow changes, run the relevant subset: `npm run check:astro`, `npm run check:eslint`, or `npm run check:prettier`.
+
+# Source Layout
+
+- `src/pages/` defines routes.
+- `src/components/widgets/` holds page sections.
+- `src/components/ui/` holds reusable UI primitives.
+- `src/components/common/` holds cross-cutting site behavior such as metadata, analytics, images, scripts, and theme toggles.
+- `src/layouts/` wraps pages and markdown.
+- `src/data/post/` contains blog posts.
+- `src/assets/` is for imported/transformed assets; `public/` is for static files served as-is.
+- `vendor/` contains the AstroWind integration; treat it like upstream/template code unless a task clearly requires changing it.
+
+# Non-Negotiables
+
+- Read `AGENTS.md`, `src/config.yaml`, `astro.config.ts`, and `src/types.d.ts` before changing related behavior.
+- Prefer Astro components and static rendering. Do not add client-side framework islands or browser JavaScript unless the interaction requires it.
+- Use `~/` imports for source modules instead of long relative paths.
+- Keep SEO, metadata, RSS, sitemap, and Open Graph behavior intact when changing routes or content.
+- Use the shared `Image.astro` component for site images unless Astro's native image handling or a plain public asset is clearly the better fit.
+- Tailwind CSS v4 is configured CSS-first in `src/assets/styles/tailwind.css`; prefer existing tokens/utilities before inventing new one-off classes.
+- Do not introduce dependencies, edit dependency versions, delete files, change lockfiles, or modify CI/deployment config without explicit confirmation.
+
+# Code Quality Rules
+
+- Fix root causes, not symptoms.
+- Keep edits scoped to the requested behavior.
+- Avoid speculative abstractions, broad refactors, and compatibility shims for unshipped branch work.
+- No dead code. Search for call sites before deleting or renaming exported symbols, routes, components, or content fields.
+- Comments should explain non-obvious constraints or workarounds only. Do not narrate edits or restate code.

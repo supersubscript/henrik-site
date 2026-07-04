@@ -1,0 +1,22 @@
+---
+description: Minimalism and idiomatic-code expectations for every change
+alwaysApply: true
+---
+
+# Code Minimalism
+
+- Implement only what was requested. Prefer the smallest correct solution.
+- Minimize state, indirection, helper functions, and new files.
+- Prefer local changes over global refactors unless the existing structure clearly requires a shared abstraction.
+- Use idiomatic Astro, TypeScript, and platform APIs before adding utilities.
+- Assume valid internal data unless the task is about external input, forms, routing params, content frontmatter, or network boundaries.
+- Preserve readable markup. Do not make `.astro` templates clever just to reduce lines.
+- Keep generated HTML accessible: semantic elements, meaningful `alt`, keyboard-friendly controls, and correct heading order.
+- Do not add comments that narrate the change. Add comments only for non-obvious constraints.
+
+# TypeScript Style
+
+- Prefer explicit exported types and props types for shared components/utilities.
+- Use modern syntax: `type`/`interface` where appropriate, optional chaining, nullish coalescing, and `const` by default.
+- Avoid `any`, broad casts, and non-null assertions unless the surrounding code already relies on that pattern or there is a concise reason.
+- Keep module imports absolute with `~/` for `src` paths.

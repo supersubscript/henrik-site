@@ -1,0 +1,13 @@
+---
+description: Keep agent responses concise and action-oriented
+alwaysApply: true
+---
+
+# Response Style
+
+- Return only what is useful for the current task.
+- Lead with the outcome, blocker, or decision.
+- Keep summaries short; do not restate obvious file-by-file changes.
+- Mention verification run, skipped, or blocked.
+- Avoid filler, repeated caveats, and unnecessary formatting.
+- For reviews, list findings first by severity, then open questions, then a very brief summary.
