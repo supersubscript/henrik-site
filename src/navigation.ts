@@ -12,8 +12,8 @@ export const footerData = {
   links: [],
   secondaryLinks: [],
   socialLinks: [
-    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/' },
-    { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:hello@example.com' },
+    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/supersubscript' },
+    { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:henrikaahl@gmail.com' },
   ],
   footNote: '',
 };
