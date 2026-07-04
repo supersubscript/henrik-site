@@ -9,7 +9,7 @@ alwaysApply: true
 
 # How To Work On It
 
-- **Runtime**: Node.js >= 22.12.0.
+- **Runtime**: Node.js >= 24.0.0.
 - **Package manager**: npm. Keep `package-lock.json` committed; never hand-edit it. Use npm commands for dependency changes.
 - **Commands**: `npm run dev`, `npm run build`, `npm run preview`, `npm run check`, `npm run fix`.
 - **Dev server**: if starting one, follow `AGENTS.md` and use Astro background mode (`astro dev --background`), then manage it with `astro dev status`, `astro dev logs`, and `astro dev stop`.

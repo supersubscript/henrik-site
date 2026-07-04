@@ -75,7 +75,7 @@ npm create astro@latest -- --template arthelokyo/astrowind
 
 Very little vanilla javascript is used only to provide basic functionality so that each developer decides which framework (React, Vue, Svelte, Solid JS...) to use and how to approach their goals.
 
-> **Note:** Requires **Node.js >= 22.12.0**. The template currently uses `output: 'static'`, but the blog only works with `prerender = true`.
+> **Note:** Requires **Node.js >= 24.0.0**. The template currently uses `output: 'static'`, but the blog only works with `prerender = true`.
 
 ### Project structure
 
